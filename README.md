@@ -60,9 +60,12 @@ This is a very brief list of things that I would love to work (improvement) on g
 * Better solution for floating input label, but still sticking with Pure CSS. Not use empty placeholder by default
 * Introduce TypeScript
 * Make modules css maintenance better, extract out common styling.
+* Introduce CSS-in-JS or styled component
 * Improve the styling of micro-interactions. Coloring in this case.
 * Any edge cases with bugs I haven't found out.
 
 ## Authors
 
 * **Stanley Hsu**
+
+Have fun! Please feel free to contact me if you need any further information, I would love to discuss it.

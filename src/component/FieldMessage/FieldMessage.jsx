@@ -2,14 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { castArray, isEmpty } from 'lodash/fp';
 
-import './FieldMessage.css';
+import styles from './FieldMessage.module.css'
 
 export function FieldMessage({ messages, error }) {
     if (isEmpty(messages)) {
         return null;
     }
 
-    const classname = (error) ? 'error' : 'helper';
+    const classname = (error) ? styles.error : styles.helper;
 
     return(
         <ul className={classname}>

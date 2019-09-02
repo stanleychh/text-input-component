@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Input } from './component/Input';
-import './App.css';
+import styles from './App.module.css';
 
 import { isNil } from 'lodash/fp';
 import { isEmailDataValid } from './common/utils';
@@ -26,7 +26,7 @@ function App() {
     };
 
     return (
-        <div className="App">
+        <div className={styles.App}>
             <Input type="text"  value={value}  onBlur={ handleBlur } onChange={ setValue } error={ error } messages={ messages } label="Email" />
             <br />
             <Input type="text" messages="Please enter full address" label="Address" value={address} onChange={setAddress} />

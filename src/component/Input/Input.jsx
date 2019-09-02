@@ -2,7 +2,7 @@ import React, {useRef, useLayoutEffect, useEffect, useState, useCallback} from '
 import PropTypes from 'prop-types';
 import { isNil, noop, toString, toNumber } from 'lodash/fp';
 
-import "./Input.css";
+import styles from './Input.module.css';
 import { FieldMessage } from "../FieldMessage";
 
 function cast(type, value) {
@@ -52,7 +52,7 @@ export function Input({
     });
 
     return (
-        <div className="form-group">
+        <div className={styles['form-group']}>
             <input
                 type={type}
                 ref={input}
@@ -66,7 +66,7 @@ export function Input({
                 aria-invalid={error}
                 placeholder="&nbsp;"
             />
-            <label className="input-placeholder">{ label }</label>
+            <label className={styles['input-placeholder']}>{ label }</label>
             <FieldMessage error={error} messages={messages} />
         </div>
     );

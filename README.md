@@ -59,7 +59,7 @@ Time:        2.531s
 This is a very brief list of things that I would love to work (improvement) on given more time:
 * Better solution for floating input label, but still sticking with Pure CSS. Not use empty placeholder by default
 * Introduce TypeScript
-* CSS-in-JS or modules css
+* Make modules css maintenance better, extract out common styling.
 * Improve the styling of micro-interactions. Coloring in this case.
 * Any edge cases with bugs I haven't found out.
 

@@ -1,0 +1,50 @@
+input {
+    display: block;
+    width: 50%;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    padding: 13px .75rem .5rem;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:disabled {
+    background: #eaebed;
+    cursor: not-allowed;
+}
+
+input[aria-invalid='false']:focus {
+    border: 2px solid deepskyblue;
+}
+
+input[aria-invalid='true'] {
+    border: 2px solid red;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-placeholder {
+    position: absolute;
+    top: 9px;
+    padding: 7px 0 0 13px;
+    transition: all 200ms;
+    opacity: 0.5;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    font-size: 75%;
+    transform: translate3d(0, -100%, 0);
+    opacity: 0.5;
+    top: 17px;
+}

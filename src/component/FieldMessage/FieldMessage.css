@@ -1,0 +1,23 @@
+ul {
+    font-size: 11px;
+    padding: 2px 4px;
+    margin: 0;
+    list-style-position: inside;
+}
+
+.error {
+    color: red;
+}
+
+.helper {
+    color: gray;
+}
+
+li:only-child {
+    display: block;
+}
+
+.error li:before {
+    content: '\0024D8';
+    margin-right: 6px;
+}

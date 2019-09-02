@@ -1,68 +1,68 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Text Input Component
 
-## Available Scripts
+This is a text input component which was implemented in React Hooks.
 
-In the project directory, you can run:
+## Installation and Setup Instructions
 
-### `npm start`
+#### Example:  
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone down this repository. You will need `node` and `npm` installed globally on your machine.  
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Installation:
 
-### `npm test`
+`npm install`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To Start Server:
 
-### `npm run build`
+`npm start`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To Visit App:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+`localhost:3000`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To Run Test Suite:  
 
-### `npm run eject`
+`npm test`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Storybook
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To Start Storybook:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`npm run storybook`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To Visit Storybook:
 
-## Learn More
+`localhost:6006`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Unit Test Libraries
+* React Testing Library
+* Jest dom
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## External Libraries
+* lodash/fp
+* prop-types
 
-### Code Splitting
+## Unit Coverage
+* PASS  src/component/FieldMessage/FieldMessage.test.jsx
+* PASS  src/component/Input/Input.test.jsx
+* PASS  src/App.test.js
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Test Suites: 3 passed, 3 total
 
-### Analyzing the Bundle Size
+Tests:       12 passed, 12 total
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Snapshots:   0 total
 
-### Making a Progressive Web App
+Time:        2.531s
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Next Steps TODO
+This is a very brief list of things that I would love to work (improvement) on given more time:
+* Better solution for floating input label, but still sticking with Pure CSS. Not use empty placeholder by default
+* Introduce TypeScript
+* CSS-in-JS or modules css
+* Improve the styling of micro-interactions. Coloring in this case.
+* Any edge cases with bugs I haven't found out.
 
-### Advanced Configuration
+## Authors
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* **Stanley Hsu**

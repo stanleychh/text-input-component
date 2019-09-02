@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Input } from './component/Input';
 import './App.css';
 
+import { isNil } from 'lodash/fp';
+import { isEmailDataValid } from './common/utils';
+import { INVALID_EMAIL, ENTER_EMAIL, VALID_EMAIL } from './common/constants';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [value, setValue] = useState('');
+    const [error, setError] = useState(false);
+    const [messages, setMessages] = useState(ENTER_EMAIL);
+
+    const [address, setAddress] = useState('');
+
+    const handleBlur = (value) => {
+        if (isNil(value)) {
+            setMessages(ENTER_EMAIL);
+        } else {
+            const isValid = isEmailDataValid(value);
+            const msg = (isValid) ? VALID_EMAIL: INVALID_EMAIL;
+
+            setError(!isValid);
+            setMessages(msg);
+        }
+    };
+
+    return (
+        <div className="App">
+            <Input type="text"  value={value}  onBlur={ handleBlur } onChange={ setValue } error={ error } messages={ messages } label="Email" />
+            <br />
+            <Input type="text" messages="Please enter full address" label="Address" value={address} onChange={setAddress} />
+            <br />
+            <Input messages={['This is not editable', 'You do not have the permission']} disabled={ true } value="This is a ready only field" />
+            <br />
+        </div>
+    );
 }
 
 export default App;
